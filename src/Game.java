@@ -15,10 +15,17 @@ public class Game {
         player.chooseWeapon();
         player.chooseLocation();
 
-        System.out.println("You found a shield! Pick it up? [y/n]");
-        String answer = scanner.nextLine();
-        if (answer.equalsIgnoreCase("y")) {
-            player.items.add("shield");
+        player.findItem("shield");}
+
+    public static String nextLine() {
+        String line = scanner.nextLine();
+        while (line.startsWith("/")){
+            System.out.println("You ran a command!");
+            line =scanner.nextLine();
         }
+        return line;
+
     }
+
 }
+

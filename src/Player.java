@@ -12,13 +12,13 @@ public class Player {
     public void chooseName() {
         System.out.println("What is your name?");
 
-        name = Game.scanner.nextLine();
+        name = Game.nextLine();
         System.out.println(name + "? What a strange name.");
     }
 
     public void chooseWeapon() throws Exception {
         System.out.println("Choose your weapon, warrior [sword/mace]");
-        weapon = Game.scanner.nextLine();
+        weapon = Game.nextLine();
 
         if (weapon.equalsIgnoreCase("sword")) {
             System.out.println("A sword is a fine weapon.");
@@ -35,7 +35,7 @@ public class Player {
 
     public void chooseLocation() throws Exception {
         System.out.println("Choose your path [forest/tunnel]");
-        location = Game.scanner.nextLine();
+        location = Game.nextLine();
 
         if (location.equalsIgnoreCase("forest")) {
             System.out.println("You find yourself surrounded by trees as you enter the forest...");
@@ -47,6 +47,14 @@ public class Player {
 
         else{
             throw new Exception("Invalid location. Try again.");
+        }
+    }
+
+    public void findItem(String item){
+        System.out.println("You found a " + item + "! Pick it up? [y/n]");
+        String answer = Game.nextLine();
+        if (answer.equalsIgnoreCase("y")) {
+            items.add(item);
         }
     }
 }
