@@ -41,7 +41,7 @@ public class Player {
             System.out.println("You find yourself surrounded by trees as you enter the forest...");
         }
 
-        else if (location.equalsIgnoreCase("tunnels")) {
+        else if (location.equalsIgnoreCase("tunnel")) {
             System.out.println("You find yourself in a dark cave as you enter the tunnel...");
         }
 
@@ -55,6 +55,7 @@ public class Player {
         String answer = Game.nextLine();
         if (answer.equalsIgnoreCase("y")) {
             items.add(item);
+            System.out.println("You pick up the " + item);
         }
     }
 }
