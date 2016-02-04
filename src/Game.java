@@ -15,7 +15,5 @@ public class Game {
         player.chooseWeapon();
         player.chooseLocation();
 
-        String numStr = scanner.nextLine();
-        int numInt = Interger.valueOf(numStr);
     }
 }
