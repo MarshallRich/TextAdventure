@@ -15,5 +15,10 @@ public class Game {
         player.chooseWeapon();
         player.chooseLocation();
 
+        System.out.println("You found a shield! Pick it up? [y/n]");
+        String answer = scanner.nextLine();
+        if (answer.equalsIgnoreCase("y")) {
+            player.items.add("shield");
+        }
     }
 }

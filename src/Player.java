@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created by MacLap on 2/3/16.
  */
@@ -5,6 +7,7 @@ public class Player {
     String name;
     String weapon;
     String location;
+    ArrayList<String> items = new ArrayList<>();
 
     public void chooseName() {
         System.out.println("What is your name?");
