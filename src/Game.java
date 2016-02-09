@@ -16,7 +16,11 @@ public class Game {
 
         player.findItem("shield");
         player.findItem("belt");
+
+        Enemy ogre = new Enemy("Ogre", 10, 10);
+        player.battle(ogre);
     }
+
 
     public static String nextLine() {
         String line = scanner.nextLine();
