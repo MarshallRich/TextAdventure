@@ -6,6 +6,18 @@ public class Character {
     int health;
     int damage;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
     public void battle(Character enemy) {
         System.out.printf("A foe appears! %s!\n", enemy.name);
 

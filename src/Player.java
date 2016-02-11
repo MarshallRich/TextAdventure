@@ -14,6 +14,17 @@ public class Player extends Character {
         this.damage = 20;
     }
 
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
 
     public void chooseName() {
         System.out.println("What is your name?");
@@ -40,15 +51,17 @@ public class Player extends Character {
     }
 
     public void chooseLocation() throws Exception {
-        System.out.println("Choose your path [forest/tunnel]");
+        System.out.println("Choose your path! [forest/tunnel]");
         location = Game.nextLine();
 
         if (location.equalsIgnoreCase("forest")) {
             System.out.println("You find yourself surrounded by trees as you enter the forest...");
+            location = "forest";
         }
 
         else if (location.equalsIgnoreCase("tunnel")) {
             System.out.println("You find yourself in a dark cave as you enter the tunnel...");
+            location = "tunnel";
         }
 
         else{
